@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 let contenidoLista =" ";
  
-db.collection("platillos").onSnapshot((datos) => {
+db.collection("platillo").onSnapshot((datos) => {
     datos.docChanges().forEach ((registro) =>{
         if (registro.type ==="added"){
             agregarALista(registro.doc.data(),registro.doc.id)
@@ -23,8 +23,25 @@ function agregarALista(platillo,id){
     document.getElementById("ListaPlatillos").innerHTML =contenidoLista;
 }
 M.AutoInit();
+document.getElementById("btnUbicacion").addEventListener("click", function(){
+    if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(exito, error);
+}
 
+    
+});
 
+function exito(posicion){
+    alert(posicion.coords.latitude + ", " + 
+        posicion.coords.longitude);
+        fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitud}&lon=${longitud}&format=json`,{
+            headers:)
+                'User-Argent':`UberEatsFer`(fernandamoraarreola@gmail.com)`
 
+            }
+        )
 
-
+}
+function error(){
+    alert("error")
+}

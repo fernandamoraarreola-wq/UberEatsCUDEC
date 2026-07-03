@@ -1,10 +1,11 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Food Ninja</title>
-  <!-- materialize icons, css & js -->
+  <title>RappiLeo</title>
+ 
   <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" href="/css/styles.css" rel="stylesheet">
@@ -12,93 +13,74 @@
 </head>
 <body class="grey lighten-4">
 
-  <!-- top nav -->
+  
   <nav class="z-depth-0">
     <div class="nav-wrapper container">
-      <a href="/">RappiLeo</span></a>
+      
+      <a href="/">RappiLeo</a>
       <span class="right grey-text text-darken-1">
         <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
       </span>
     </div>
   </nav>
 
-  <!-- side nav -->
+  
   <ul id="side-menu" class="sidenav side-menu">
     <li><a class="subheader">RappiLeo</a></li>
-    <li><a href="/" class="waves-effect">Home</a></li>
-    <li><a href="/pages/about.html" class="waves-effect">About</a></li>
+    <li><a href="/" class="waves-effect">Inicio</a></li>
+    <li><a href="/pages/about.html" class="waves-effect">Acerca de</a></li>
     <li><div class="divider"></div></li>
-    <li><a href="/pages/contact.html" class="waves-effect">
-      <i class="material-icons">mail_outline</i>Contact</a>
+    <li>
+      <a href="/pages/contact.html" class="waves-effect">
+        <i class="material-icons">mail_outline</i>Contacto
+      </a>
     </li>
   </ul>
 
-  
-    <!-- content -->
-<div class="container grey-text">
-
-</div>
-<form>
-  <select id="ListaPlatillos"></select>
-  
-</form>
-
-<div class="center">
-  <a class="btn-floating btn-small btn-large sidenav-trigger"
-     data-target="side-pedido">
-    <i class="material-icons">add</i>
-  </a>
-</div>
-
-<!-- Panel Pedido -->
-<div id="side-pedido" class="sidenav side-form">
-  <form id="formPedido" class="container section">
-
-    <h6>Nuevo Pedido</h6>
-    <div class="divider"></div>
-
-    <div class="input-field">
-      <select id="platilloPedido">
-        <option value="" disabled selected>Selecciona un platillo</option>
-        <option value="Pizza">Pizza</option>
-        <option value="chilaquiles">chilaquiles</option>
-        <option value="Tacos">Tacos</option>
-      </select>
-      <label>Platillo</label>
-    </div>
-
-    <div class="input-field">
-      <input
-        id="direccion"
-        type="text"
-        class="validate"
-        placeholder="Ej. Av. Hidalgo #123">
-      <label for="direccion">Dirección</label>
-    </div>
+ 
+  <div class="container grey-text">
+    <h4 class="center-align grey-text text-darken-3">Menú</h4>
+    
+    
+    <form>
+      <div class="input-field">
+        <select id="ListaPlatillos">
+          <option value="" disabled selected>Cargando platillo</option>
+        </select>
+        <label>Platillos Disponibles</label>
+      </div>
+      <div class="input-field">
+    <input
+      id="direccion"
+      type="text"
+      class="validate"
+      placeholder="Ej. Calle Juárez #123, Col. Centro">
+    <label for="direccion">Dirección del pedido</label>
+  </div>
+<div>
+  <form action="pedidos.html" method="get">
 
     <button
-      type="button"class="btn red"
+      type="button"
+      class="btn red"
       onclick="window.location.href='../index.html'">
       Cancelar
     </button>
-  
 
-    <form action="pedidos.html" method="get">
-    <button type="submit" class="btn green">
+    <button
+      type="submit"
+      class="btn green">
       Guardar
     </button>
-    </form>
+<br>
+<br>
 
   </form>
+    <button id="btnUbicacion">Ubicacion</button>
 </div>
-
-
-  </div>
-<script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-app.js">
-  </script>
-
-    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-firestore.js">
-  </script>
+  
+  <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-firestore.js"></script>
 
   <script src="/js/firebase.js"></script>
   <script src="/js/pedidos.js"></script>
