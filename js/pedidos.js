@@ -22,6 +22,35 @@ function agregarALista(platillo,id){
     </option>`;
     document.getElementById("ListaPlatillos").innerHTML =contenidoLista;
 }
+
+const btnPedido = document.getElementById("btnPedido");
+
+
+btnPedido.addEventListener("click", () => {
+
+    const platillo = document.getElementById("ListaPlatillos").value;
+    const direccion = document.getElementById("direccion").value;
+
+    db.collection("Pedidos").add({
+        platillo: platillo,
+        direccion: direccion
+        
+    })
+    .then(() => {
+        alert("Pedido realizado correctamente.");
+
+        document.getElementById("direccion").value = "";
+        document.getElementById("ListaPlatillos").selectedIndex = 0;
+
+        M.FormSelect.init(document.querySelectorAll('select'));
+    })
+    .catch((error) => {
+        console.error("Error al guardar el pedido:", error);
+    });
+
+});
+
+
 M.AutoInit();
 document.getElementById("btnUbicacion").addEventListener("click", function(){
     if (navigator.geolocation) {
@@ -32,16 +61,27 @@ document.getElementById("btnUbicacion").addEventListener("click", function(){
 });
 
 function exito(posicion){
-    alert(posicion.coords.latitude + ", " + 
-        posicion.coords.longitude);
-        fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitud}&lon=${longitud}&format=json`,{
-            headers:)
-                'User-Argent':`UberEatsFer`(fernandamoraarreola@gmail.com)`
+    let lantitud = posicion.coords.latitude;
+    let longtitud = posicion.coords.longitude;
+        fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitud}&lon=${longitud}&format=json`, {
+        headers: {
+            'User-Agent': 'UberEatsFer (fernandamoraarreola@gmail.com)'
+        }
+    })
 
-            }
-        )
+
+    
+        .then(respuesta => respuesta.json())
+        .then(data => {
+            let ciudad =data.address.city;
+            let pais = data.address.country;
+            document.getElementById("Ubicacion").value = `${ciudad}, ${pais}`;
+        })
+        
+        
 
 }
-function error(){
-    alert("error")
+function error(error){
+    alert("error al obtener la ubicacion")
+    console.log(error);
 }

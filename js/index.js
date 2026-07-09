@@ -9,6 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
   M.Sidenav.init(forms, {edge: 'left'});
 });
 
+document.querySelector(".recipes").addEventListener("click", (e)=>{
+
+    if(e.target.classList.contains("material-icons")){
+
+        const id = e.target.dataset.id;
+        eliminarPlatillo(id);
+    }
+
+});
+
 
 function mostrarPlatillo(platillo,id){
   contenido += `<div class="card-panel recipe white row" 
@@ -30,6 +40,7 @@ function mostrarPlatillo(platillo,id){
     </div>`;
   document.querySelector('.recipes').innerHTML = contenido;
 }
+
 function actualizarPlatillo(platillo,id){
   let tarjeta = document.getElementById(`${id}`);
   tarjeta.querySelector(".recipe-title").innerHTML = platillo.nombre;
@@ -37,5 +48,6 @@ function actualizarPlatillo(platillo,id){
    tarjeta.querySelector(".recipe-price").innerHTML = platillo.precio;
   
 }
+
 
 

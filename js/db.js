@@ -7,6 +7,10 @@ db.collection("platillo").onSnapshot((datos) => {
        if (registro.type === "modified"){
         actualizarPlatillo(registro.doc.data(),registro.doc.id);
        } 
+
+       if (registro.type === "removed") {
+        document.getElementById(registro.doc.id).remove();
+}
     });
 });
 
@@ -27,4 +31,18 @@ formularioAgregar.addEventListener("submit",(e) =>{
     formularioAgregar.ingredients.value ="";
     formularioAgregar.price.value ="";
     alert("platillo agregado")
+ 
 });
+
+
+ function eliminarPlatillo(id){
+
+    db.collection("platillo").doc(id).delete()
+    .then(() => {
+        console.log("Platillo eliminado");
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
+}
