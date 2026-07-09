@@ -75,7 +75,7 @@ function exito(posicion){
         .then(data => {
             let ciudad =data.address.city;
             let pais = data.address.country;
-            document.getElementById("Ubicacion").value = `${ciudad}, ${pais}`;
+            document.getElementById("direccion").value = `${ciudad}, ${pais}`;
         })
         
         
