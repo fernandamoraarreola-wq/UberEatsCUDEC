@@ -51,7 +51,7 @@ btnPedido.addEventListener("click", () => {
 });
 
 
-M.AutoInit();
+
 document.getElementById("btnUbicacion").addEventListener("click", function(){
     if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(exito, error);
@@ -61,8 +61,8 @@ document.getElementById("btnUbicacion").addEventListener("click", function(){
 });
 
 function exito(posicion){
-    let lantitud = posicion.coords.latitude;
-    let longtitud = posicion.coords.longitude;
+    let latitud = posicion.coords.latitude;
+    let longitud = posicion.coords.longitude;
         fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitud}&lon=${longitud}&format=json`, {
         headers: {
             'User-Agent': 'UberEatsFer (fernandamoraarreola@gmail.com)'
@@ -76,6 +76,12 @@ function exito(posicion){
             let ciudad =data.address.city;
             let pais = data.address.country;
             document.getElementById("direccion").value = `${ciudad}, ${pais}`;
+            var map = L.map('mapa').setView([latitud, longitud], 13);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; <a href="http://ww.openstreetmap.org/copyrigth">OpenStreetmap</a>'
+            }).addTo(map);
+            var marker = L.marker([latitud,longitud]).addTo(map);
         })
         
         
@@ -85,3 +91,4 @@ function error(error){
     alert("error al obtener la ubicacion")
     console.log(error);
 }
+M.AutoInit();
