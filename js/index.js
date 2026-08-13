@@ -55,16 +55,16 @@ let height = 0;
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const foto = document.getElementById('foto');
-const btnFoto = document.getElementById('btnFoto');      // Abrir cámara
+const btnFoto = document.getElementById('btnFoto');       // Abrir cámara
 const btnTomarFoto = document.getElementById('tomarFoto'); // Tomar foto
 let streamActivo = null;
 
-
+// Crear botón borrar foto
 const btnBorrarFoto = document.createElement("button");
 btnBorrarFoto.textContent = "Borrar Foto";
 document.getElementById("salida").appendChild(btnBorrarFoto);
 
-
+// Abrir cámara
 function abrirCamara(){
     navigator.mediaDevices.getUserMedia({
         video: { facingMode: "environment" },
@@ -100,7 +100,7 @@ btnTomarFoto.addEventListener("click", ()=>{
         canvas.height = height;
         contexto.drawImage(video, 0, 0, width, height);
         const fotoFinal = canvas.toDataURL("image/png");
-        foto.setAttribute("src", fotoFinal);
+        foto.src = fotoFinal; // usamos solo el <img id="foto">
 
         // detener cámara y ocultar video
         if(streamActivo){
