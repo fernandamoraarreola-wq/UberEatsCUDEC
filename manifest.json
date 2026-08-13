@@ -1,0 +1,81 @@
+{
+    "name": "RappiLeo",
+    "theme_color": "#9c1515",
+    "short_name": "RappiLeo",
+    "display": "standalone",
+    "orientation": "portrait",
+    "start_url": "C:\\Users\\Programacion\\Desktop\\PROYECTO FER ING SISTEMAS C\\UberEatsCUDEC",
+    "lang": "es",
+    "icons": [
+      {
+        "src": "img/icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "16x16"
+      },
+      {
+        "src": "icon-32x32.png",
+        "type": "image/png",
+        "sizes": "32x32"
+      },
+      {
+        "src": "img/icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      },
+      {
+        "src": "img/icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "64x64"
+      },
+      {
+        "src": "img/icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "img/icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      },
+      {
+        "src": "icon-144x144.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "img/icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "152x152"
+      },
+      {
+        "src": "img/icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "180x180"
+      },
+      {
+        "src": "img/icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "img/icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "img/icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "384x384"
+      },
+      {
+        "src": "img/icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      },
+      {
+        "src": "img/icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
