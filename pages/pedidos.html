@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>RappiLeo</title>
- 
+  <!-- Materialize Icons, CSS & JS -->
   <link type="text/css" href="../css/materialize.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" href="../css/styles.css" rel="stylesheet">
   <script type="text/javascript" src="../js/materialize.min.js"></script>
-
-  
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
   crossorigin="">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -20,54 +18,51 @@
   crossorigin="">
 
   </script>
-<style>
-  #mapa {height: 180px;
-  width: 100%;}
+  <style>
+    #mapa {height:180px; 
+     width: 100%;}
+  </style>
+  <link rel="manifest" href="../manifest.json">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="capifud">
+  <meta name="apple-mobile-web-app-title" content="capifud">
+  <meta name="theme-color" content="#1981d6">
+  <meta name="msapplication-navbutton-color" content="#1981d6">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="C:\uberleo\UberEatsCUDEC\index.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-</style>
-<link rel="manifest" href="../manifest.json">
-
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="application-name" content="RappiLeo">
-<meta name="apple-mobile-web-app-title" content="RappiLeo">
-<meta name="theme-color" content="#9c1515">
-<meta name="msapplication-navbutton-color" content="#9c1515">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="msapplication-starturl" content="C:\Users\Programacion\Desktop\PROYECTO FER ING SISTEMAS C\UberEatsCUDEC">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<link rel="icon" type="image/png" sizes="16x16" href="icon-16x16.png">
-<link rel="apple-touch-icon" type="image/png" sizes="16x16" href="icon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="icon-32x32.png">
-<link rel="apple-touch-icon" type="image/png" sizes="32x32" href="icon-32x32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="icon-48x48.png">
-<link rel="apple-touch-icon" type="image/png" sizes="48x48" href="icon-48x48.png">
-<link rel="icon" type="image/png" sizes="64x64" href="icon-64x64.png">
-<link rel="apple-touch-icon" type="image/png" sizes="64x64" href="icon-64x64.png">
-<link rel="icon" type="image/png" sizes="96x96" href="icon-96x96.png">
-<link rel="apple-touch-icon" type="image/png" sizes="96x96" href="icon-96x96.png">
-<link rel="icon" type="image/png" sizes="128x128" href="icon-128x128.png">
-<link rel="apple-touch-icon" type="image/png" sizes="128x128" href="icon-128x128.png">
-<link rel="icon" type="image/png" sizes="144x144" href="icon-144x144.png">
-<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="icon-144x144.png">
-<link rel="icon" type="image/png" sizes="152x152" href="icon-152x152.png">
-<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="icon-152x152.png">
-<link rel="icon" type="image/png" sizes="180x180" href="icon-180x180.png">
-<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192" href="icon-192x192.png">
-<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="icon-192x192.png">
-<link rel="icon" type="image/png" sizes="192x192" href="icon-192x192-maskable.png">
-<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="icon-192x192-maskable.png">
-<link rel="icon" type="image/png" sizes="384x384" href="icon-384x384.png">
-<link rel="apple-touch-icon" type="image/png" sizes="384x384" href="icon-384x384.png">
-<link rel="icon" type="image/png" sizes="512x512" href="icon-512x512.png">
-<link rel="apple-touch-icon" type="image/png" sizes="512x512" href="icon-512x512.png">
-<link rel="icon" type="image/png" sizes="512x512" href="icon-512x512-maskable.png">
-<link rel="apple-touch-icon" type="image/png" sizes="512x512" href="icon-512x512-maskable.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/icons/icon-16x16.png">
+<link rel="apple-touch-icon" type="image/png" sizes="16x16" href="img/icons/icon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/icons/icon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="32x32" href="img/icons/icon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="img/icons/icon-48x48.png">
+<link rel="apple-touch-icon" type="image/png" sizes="48x48" href="img/icons/icon-48x48.png">
+<link rel="icon" type="image/png" sizes="64x64" href="img/icons/icon-64x64.png">
+<link rel="apple-touch-icon" type="image/png" sizes="64x64" href="img/icons/icon-64x64.png">
+<link rel="icon" type="image/png" sizes="96x96" href="img/icons/icon-96x96.png">
+<link rel="apple-touch-icon" type="image/png" sizes="96x96" href="img/icons/icon-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="img/icons/icon-128x128.png">
+<link rel="apple-touch-icon" type="image/png" sizes="128x128" href="img/icons/icon-128x128.png">
+<link rel="icon" type="image/png" sizes="144x144" href="img/icons/icon-144x144.png">
+<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="img/icons/icon-144x144.png">
+<link rel="icon" type="image/png" sizes="152x152" href="img/icons/icon-152x152.png">
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="img/icons/icon-152x152.png">
+<link rel="icon" type="image/png" sizes="180x180" href="img/icons/icon-180x180.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="img/icons/icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/icons/icon-192x192.png">
+<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="img/icons/icon-192x192.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/icons/icon-192x192-maskable.png">
+<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="img/icons/icon-192x192-maskable.png">
+<link rel="icon" type="image/png" sizes="384x384" href="img/icons/icon-384x384.png">
+<link rel="apple-touch-icon" type="image/png" sizes="384x384" href="img/icons/icon-384x384.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/icons/icon-512x512.png">
+<link rel="apple-touch-icon" type="image/png" sizes="512x512" href="img/icons/icon-512x512.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/icons/icon-512x512-maskable.png">
+<link rel="apple-touch-icon" type="image/png" sizes="512x512" href="img/icons/icon-512x512-maskable.png">
 </head>
-
-
 <body class="grey lighten-4">
 
   
@@ -81,14 +76,13 @@
     </div>
   </nav>
 
-  
   <ul id="side-menu" class="sidenav side-menu">
     <li><a class="subheader">RappiLeo</a></li>
     <li><a href="/" class="waves-effect">Inicio</a></li>
-    <li><a href="pages/about.html" class="waves-effect">Acerca de</a></li>
+    <li><a href="about.html" class="waves-effect">Acerca de</a></li>
     <li><div class="divider"></div></li>
     <li>
-      <a href="pages/contact.html" class="waves-effect">
+      <a href="contact.html" class="waves-effect">
         <i class="material-icons">mail_outline</i>Contacto
       </a>
     </li>
@@ -102,7 +96,7 @@
     <form>
       <div class="input-field">
         <select id="ListaPlatillos">
-          <option value="" disabled selected>Cargando platillo</option>
+          <option value="" disabled selected>Cargando menú...</option>
         </select>
         <label>Platillos Disponibles</label>
       </div>
@@ -111,29 +105,34 @@
       id="direccion"
       type="text"
       class="validate"
-      placeholder="Ej. Calle Juárez #123, Col. Centro">
-    <label for="direccion">Dirección del pedido</label>
+      placeholder="Ej. Calle Juárez #123, Col. Centro" required>
+    <label for="direccion">Dirección de entrega</label>
   </div>
-<div>
 
-    <button
-      type="button"
-      class="btn red"
-      onclick="window.location.href='../index.html'">
-      Cancelar
-    </button>
+  <button class="btn waves-effect waves-light" type="button" id="btnPedido">
+    Realizar pedido
+  </button>  <button href="/" class="btn waves-effect waves-light red" type="button" onclick="window.location.href='/'"  >
+    cancelar
+  </button>
+    </form>
+<br>
+    <button class="btn waves-effect waves-light blue" id="btnUbicacion">
+    Ubicacion
+  </button>
+  <div  id="mapa"></div>
 
-    <button
-      type="button"
-      class="btn green" id="btnPedido">
-      Guardar
-    </button>
-<br>
-<br>
-</div>
-  </form>
-    <button id="btnUbicacion">Ubicacion</button>
-    <div id="mapa"></div>
+
+
+  </div> 
+
+  
+  
+
+  
+
+  <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-firestore.js"></script>
+
   <script src="../js/firebase.js"></script>
   <script src="../js/pedidos.js"></script>
 </body>
